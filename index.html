@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alberto Perez - Data Scientist</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="assets/images/APG_logo.png">
 </head>
 <body>
-    <div class="navbar">
-        <h1 class="navbar-title">Alberto Perez - Data Scientist</h1>
-        <button class="menu-toggle" aria-label="Open menu">
+    <nav class="navbar">
+        <h1 class="navbar-title">Alberto Perez Gant - Data Scientist</h1>
+        <button class="menu-toggle" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
             ☰
         </button>
         <div class="nav-links">
@@ -19,7 +20,8 @@
             <a href="#projects">Projects</a>
             <a href="#education">Education</a>
         </div>
-    </div>
+    </nav>
+    <button id="scrollToTopBtn" title="Volver arriba">↑</button>
     <div class="container main-container">
         <!-- Contact & Skills Section -->
         <div class="contact-skills">
