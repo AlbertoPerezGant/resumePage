@@ -1,0 +1,340 @@
+/* Estilos generales */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    font-size: 14px; /* Tamaño de texto unificado */
+    line-height: 1.6;
+    overflow-x: hidden; /* Evitar el desbordamiento horizontal */
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+}
+
+/* Paleta de colores */
+:root {
+    --primary-color: #001f3f; /* Azul oscuro */
+    --secondary-color: #0056b3; /* Azul más claro */
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --white: #fff;
+    --border-color: #ccc;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Barra de navegación */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Título de la barra de navegación */
+.navbar-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0;
+}
+
+/* Botón de menú (hamburguesa) */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Ocultar en pantallas grandes */
+}
+
+/* Enlaces de navegación */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.nav-links a::after {
+    font-size: 10px;
+    margin-left: 5px;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    color: var(--secondary-color);
+}
+
+/* Contenedor principal */
+.container {
+    margin: 60px auto; /* Centrar el formulario */
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
+    justify-content: flex-start;
+    gap: 20px; /* Espacio entre secciones */
+    max-width: 80%; 
+    padding: 0 40px; 
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Títulos y texto */
+h1{
+    text-align: center;
+    margin: 10px 0;
+    color: var(--primary-color);
+}
+
+h2 {
+    text-align: left; /* Alineación a la izquierda */
+    margin: 0;
+    padding: 10px 0;
+    color: var(--primary-color);
+}
+
+p {
+    text-align: left;
+    margin: 20px 0;
+    padding-left: 10px;
+}
+
+/* Secciones */
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    text-align: left; /* Asegurar que el texto dentro de la sección esté alineado a la izquierda */
+    margin: 0 auto; /* Centrar horizontalmente el contenedor sin afectar el contenido interno */
+}
+
+.contact-info, .skills {
+    flex: 1; /* Permitir que ambas secciones ocupen el mismo espacio */
+    min-width: 0; /* Permitir que el contenido se ajuste correctamente */
+    max-width: 100%; /* Limitar el ancho máximo para evitar que se extienda demasiado */
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box; /* Incluir padding en el ancho total */
+    text-align: left; /* Alinear el contenido a la izquierda */
+}
+
+/* Contenedor de Contacto y Habilidades */
+.contact-skills {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.skills-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.skill-badge {
+    background-color: #f0f0f0;
+    color: #1f497d;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 0.85em;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.skill-badge:hover {
+    background-color: #d4a017;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Estilos para el formulario de contacto */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    position: relative;
+}
+
+.carousel-item {
+    min-width: 150px;
+    max-width: 400px;
+    flex: 0 0 auto;
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    scroll-snap-align: start;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Estilo para los enlaces sociales */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Estilo para el pie de página */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar el botón de menú */
+    }
+
+    .nav-links {
+        display: none; /* Ocultar los enlaces por defecto */
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: var(--primary-color);
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px var(--shadow-color);
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostrar los enlaces cuando el menú esté activo */
+    }
+
+    .container {
+        margin: 60px auto; /* Centrar el contenedor */
+        flex-direction: column; /* Apilar las secciones verticalmente */
+        gap: 20px; /* Espacio entre secciones */
+        padding: 0 20px; /* Reducir el padding para pantallas pequeñas */
+        box-sizing: border-box; /* Incluir padding en el ancho total */
+        max-width: 100%; /* Asegurar que el contenedor no exceda el ancho de la pantalla */ 
+    }
+
+    .contact-info, .skills {
+        min-width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 100%; /* Elimina el límite de ancho */
+        box-sizing: border-box; /* Incluir padding en el ancho total */
+    }
+
+    .contact-skills {
+        flex-direction: column; /* Apilar las secciones verticalmente */
+        gap: 20px;
+    }
+
+    .skills-badges {
+        justify-content: center; /* Centrar las habilidades */
+        gap: 10px; /* Espacio entre las habilidades */
+    }
+
+    /* Redefinir el ancho mínimo de los elementos del carrusel */
+    .carousel-item {
+        min-width: 90%; /* Se adapta al 90% del ancho de la pantalla */
+    }
+}
