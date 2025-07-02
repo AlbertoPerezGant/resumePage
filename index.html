@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alberto Perez - Data Scientist</title>
+    <title>Alberto Perez - Data</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/png" href="assets/images/APG_logo.png">
 </head>
 <body>
     <nav class="navbar">
-        <h1 class="navbar-title">Alberto Perez Gant - Data Scientist</h1>
-        <button class="menu-toggle" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
-            ☰
-        </button>
+        <div class="navbar-logo">APG</div>
+        <span class="navbar-title">Alberto Perez Gant</span>
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
         <div class="nav-links">
+            <a href="#home" class="active">Home</a>
             <a href="#contact">Contact & Skills</a>
-            <a href="#summary">Summary</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#education">Education</a>
         </div>
     </nav>
     <button id="scrollToTopBtn" title="Volver arriba">↑</button>
+    <section id="home" class="container main-container" style="min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div style="margin-top: 60px;"></div>
+        <div class="navbar-logo" style="margin: 0 auto 24px auto; width: 100px; height: 100px; font-size: 2.2rem; font-weight: bold; font-family: 'Inter', sans-serif;">APG</div>
+        <h1 class="hero-title">Alberto Perez Gant</h1>
+        <div class="hero-subtitle">Data Scientist & Engineer</div>
+        <div class="hero-description">
+            <p><strong>Industrial Engineer</strong> with <strong>Data Science</strong> background and over 7 years of experience. Expert in building predictive models, optimizing data pipelines, and automating processes. Passionate about solving complex problems through data analysis and artificial intelligence.</p>
+        </div>
+        <div class="hero-buttons">
+            <a href="#projects" class="hero-btn-primary">View My Work</a>
+            <a href="#contact" class="hero-btn-secondary">Get in Touch</a>
+        </div>
+    </section>
     <div class="container main-container">
+        
         <!-- Contact & Skills Section -->
         <div class="contact-skills">
             <!-- Contact -->
@@ -57,12 +70,6 @@
                     <span class="skill-badge">Power BI</span>
                 </div>
             </div>
-        </div>
-
-        <!-- Summary Section -->
-        <div id="summary">
-            <h2>Summary</h2>
-            <p><strong>Industrial Engineer</strong> with <strong>Data Science</strong> background and over 7 years of experience. Expert in building predictive models, optimizing data pipelines, and automating processes. Passionate about solving complex problems through data analysis and artificial intelligence.</p>
         </div>
 
         <!-- Experience Section -->
@@ -112,9 +119,9 @@
         </div>
 
         <!-- Education Section -->
-        <div id="education">
-            <h2>Education</h2>
-            <ul>
+        <div id="education" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+            <h2 style="text-align: center;">Education</h2>
+            <ul style="text-align: center; list-style-position: inside; padding: 0;">
                 <li><strong>Data Science MSc:</strong> Open University of Catalonia (UOC), 2021 - 2022</li>
                 <li><strong>Industrial Engineering MSc:</strong> Polytechnic University of Valencia (UPV), 2017 - 2019</li>
                 <li><strong>Mechanical Engineering:</strong> University of Cordoba (UCO), 2012 - 2017</li>
