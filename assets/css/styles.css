@@ -147,6 +147,19 @@ h1, .hero-title {
     letter-spacing: 1px;
 }
 
+h2 {
+    text-align: left; /* Alineación a la izquierda */
+    margin: 0;
+    padding: 10px 0;
+    color: var(--text-color);
+}
+
+p {
+    text-align: left;
+    margin: 20px 0;
+    padding-left: 10px;
+}
+
 .hero-subtitle {
     text-align: center;
     font-size: 1.5rem;
@@ -200,19 +213,6 @@ h1, .hero-title {
     background: #e5e7eb;
     color: #181e29;
     transform: translateY(-2px) scale(1.04);
-}
-
-h2 {
-    text-align: left; /* Alineación a la izquierda */
-    margin: 0;
-    padding: 10px 0;
-    color: var(--text-color);
-}
-
-p {
-    text-align: left;
-    margin: 20px 0;
-    padding-left: 10px;
 }
 
 /* Secciones */
@@ -337,18 +337,6 @@ p {
 .footer-content {
     font-size: 15px;
     font-weight: 500;
-}
-
-
-/* Sección de Educación */
-#education {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    width: 100%;
-    margin-top: 32px;
-    text-align: left;
 }
 
 /* Estilo para el botón de volver arriba */
