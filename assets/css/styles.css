@@ -402,4 +402,13 @@ p {
     .container.main-container {
         padding: 0 4px;
     }
+    .contact-skills {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+    }
+
+    .contact-skills > * {
+        width: 100%;
+    }
 }
