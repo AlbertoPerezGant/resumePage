@@ -1,0 +1,15 @@
+/* Utilidades y helpers */
+@import url('./variables.css');
+
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.p-0 { padding: 0 !important; }
+.w-100 { width: 100% !important; }
+.flex { display: flex !important; }
+.flex-col { flex-direction: column !important; }
+.flex-row { flex-direction: row !important; }
+.gap-8 { gap: 8px !important; }
+.gap-16 { gap: 16px !important; }
+.gap-24 { gap: 24px !important; }

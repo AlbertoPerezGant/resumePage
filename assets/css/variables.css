@@ -1,0 +1,21 @@
+/* Paleta de colores y fuentes */
+:root {
+    --primary-color: #181e29;
+    --secondary-color: #2563eb;
+    --accent-gradient: linear-gradient(90deg, #4f8cff 0%, #a259ff 100%);
+    --after-gradient: linear-gradient(90deg, #a259ff 0%, #4f8cff 100%);
+    --background-color: #181e29;
+    --text-color: #cfd8dc;
+    --white: #fff;
+    --border-color: #232b3a;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --brand-purple: #a259ff;
+    --brand-blue: #4f8cff;
+    --brand-dark: #232b3a;
+    --terciary-color: #2563eb;
+    --danger-color: #e53e3e;
+    --success-color: #38a169;
+    --warning-color: #f6ad55;
+    --info-color: #3182ce;
+    --font-main: 'Inter', sans-serif;
+}
