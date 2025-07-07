@@ -1,0 +1,32 @@
+/* =============================
+   AJUSTES GLOBALES Y RESET
+   ============================= */
+:root {
+    --primary-color: #181e29;
+    --secondary-color: #2563eb;
+    --accent-gradient: linear-gradient(90deg, #4f8cff 0%, #a259ff 100%);
+    --after-gradient: linear-gradient(90deg, #a259ff 0%, #4f8cff 100%);
+    --background-color: #181e29;
+    --text-color: #cfd8dc;
+    --white: #fff;
+    --border-color: #232b3a;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --brand-blue: #4f8cff;
+    --brand-dark: #232b3a;
+    --font-main: 'Inter', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background: radial-gradient(ellipse at 50% 30%, var(--brand-dark) 60%, var(--primary-color) 100%);
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.text-center { text-align: center !important; }
+.w-100 { width: 90% !important; }
