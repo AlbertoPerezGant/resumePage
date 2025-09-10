@@ -1,4 +1,4 @@
-// Este archivo contiene el código JavaScript para el proyecto. Se utiliza para agregar interactividad y funcionalidad a la página web.
+// This file contains the JavaScript code for the project. It is used to add interactivity and functionality to the web page.
 
 window.addEventListener('load', () => {
     window.scrollTo(0, 0);
@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Hacer que los enlaces del menú sean funcionales
+    // Smooth scroll for navigation links with offset
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Botón scroll to top
+    // Button scroll to top
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 200) {
@@ -131,7 +131,7 @@ function renderProjectsGrid() {
 
 document.addEventListener('DOMContentLoaded', renderProjectsGrid);
 
-// Selecciona el elemento carousel de forma segura
+// Scroll indicators for carousel
 const carousel = document.querySelector('.carousel');
 if (carousel) {
     // Solo añade el event listener si existe el elemento
