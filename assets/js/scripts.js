@@ -131,5 +131,9 @@ function renderProjectsGrid() {
 
 document.addEventListener('DOMContentLoaded', renderProjectsGrid);
 
-// Actualizar los puntos al desplazarse
-carousel.addEventListener('scroll', updateIndicators);
+// Selecciona el elemento carousel de forma segura
+const carousel = document.querySelector('.carousel');
+if (carousel) {
+    // Solo añade el event listener si existe el elemento
+    carousel.addEventListener('scroll', updateIndicators);
+}
