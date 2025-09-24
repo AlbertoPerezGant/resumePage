@@ -88,7 +88,7 @@ const projectsData = [
   {
     title: "Inventory optimization with RL",
     description: "Development of a reinforcement learning model to optimize inventory management and reduce costs in supply chain operations.",
-    badges: ["Reinforcement Learning", "Python", "Supply Chain"]
+    badges: ["RL", "Python", "Supply Chain"]
   },
   {
     title: "Image Detection",
