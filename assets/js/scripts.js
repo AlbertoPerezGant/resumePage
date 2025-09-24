@@ -130,10 +130,3 @@ function renderProjectsGrid() {
 }
 
 document.addEventListener('DOMContentLoaded', renderProjectsGrid);
-
-// Scroll indicators for carousel
-const carousel = document.querySelector('.carousel');
-if (carousel) {
-    // Solo añade el event listener si existe el elemento
-    carousel.addEventListener('scroll', updateIndicators);
-}

@@ -54,17 +54,6 @@
     transform: translateY(-2px) scale(1.04);
 }
 
-/* Secciones */
-.section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background: var(--white);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px var(--shadow-color);
-    text-align: left; /* Asegurar que el texto dentro de la sección esté alineado a la izquierda */
-    margin: 0 auto; /* Centrar horizontalmente el contenedor sin afectar el contenido interno */
-}
-
 .contact-info, .skills {
     flex: 1; /* Permitir que ambas secciones ocupen el mismo espacio */
     min-width: 0; /* Permitir que el contenido se ajuste correctamente */

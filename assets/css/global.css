@@ -158,3 +158,8 @@ p {
     margin: 20px 0;
     padding-left: 10px;
 }
+svg {
+  color: var(--brand-purple);
+  width: 1.1em;
+  height: 1.1em;
+}
