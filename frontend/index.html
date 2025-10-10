@@ -21,9 +21,8 @@
         </div>
     </nav>
     <button id="scrollToTopBtn" title="Volver arriba">↑</button>
-    <section id="home" class="container main-container" style="min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <div style="margin-top: 60px;"></div>
-        <div class="navbar-logo" style="margin: 0 auto 24px auto; width: 100px; height: 100px; font-size: 2.2rem; font-weight: bold; font-family: 'Inter', sans-serif;">APG</div>
+    <section id="home" class="container main-container">
+        <div class="hero-logo navbar-logo">APG</div>
         <h1 class="hero-title">Alberto Perez Gant</h1>
         <div class="hero-subtitle">Data Scientist & Engineer</div>
         <div class="hero-description">
@@ -38,18 +37,6 @@
         
         <!-- Contact & Skills Section -->
         <div class="contact-skills">
-            <!-- Contact -->
-            <div id="contact" class="contact-info">
-                <h2>Contact</h2>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/alberto-p/" target="_blank" class="social-button">
-                        <img src="assets/images/linkedin-icon.png" alt="LinkedIn" class="social-icon">
-                    </a>
-                    <a href="https://github.com/AlbertoPerezGant" target="_blank" class="social-button">
-                        <img src="assets/images/github-icon.png" alt="GitHub" class="social-icon">
-                    </a>
-                </div>
-            </div>
 
             <!-- Skills -->
             <div id="skills" class="skills">
@@ -71,6 +58,8 @@
                 </div>
             </div>
         </div>
+
+        
 
         <!-- Experience Section (stacked cards) -->
         <div id="experience" class="experience-section">
@@ -156,6 +145,47 @@
                 </div>
             </div>
         </div>
+
+        <!-- Get in touch Section -->
+        <div class="contact-section">
+            <h2 class="contact-title">Get in touch</h2>
+            <div class="contact-data">
+                <div id="contact" class="contact-info">
+                <h3>Let's connect</h3>
+                <p class="contact-description">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/alberto-p/" target="_blank" rel="noopener noreferrer" class="social-button">
+                            <img src="./assets/images/linkedin-icon.png" alt="LinkedIn" class="social-icon">
+                        </a>
+                        <a href="https://github.com/AlbertoPerezGant" target="_blank" rel="noopener noreferrer" class="social-button">
+                            <img src="./assets/images/github-icon.png" alt="GitHub" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm" class="contact-card contact-form-card" novalidate>
+                    <div class="form-header">
+                        <h3>Send a Message</h3>
+                    </div>
+
+                    <label class="form-label" for="name">Name
+                        <input id="name" name="name" type="text" placeholder="Your name" required>
+                    </label>
+
+                    <label class="form-label" for="email">Email
+                        <input id="email" name="email" type="email" placeholder="your.email@example.com" required>
+                    </label>
+
+                    <label class="form-label" for="message">Message
+                        <textarea id="message" name="message" placeholder="Your message..." rows="6" required></textarea>
+                    </label>
+
+                    <button type="submit" class="btn-send">Send Message</button>
+                </form>
+            </div>
+        </div>
+
     </div>
     <footer class="footer">
         <div class="footer-content">

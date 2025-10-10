@@ -1,0 +1,105 @@
+/* Contact / Get in touch section */
+.contact-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin: 0 auto 3rem auto;
+    padding: 0 12px;
+}
+.contact-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    background: linear-gradient(90deg, #8b5cf6, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    grid-column: 1 / -1; /* span both columns */
+}
+/* Estilo para los enlaces sociales */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--accent-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+    background: var(--after-gradient);
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Contact form card (right column) */
+.contact-form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0; /* grid handles spacing */
+}
+
+.form-label input, .form-label textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 6px;
+    background: rgba(255,255,255,0.01);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    color: white;
+}
+
+.form-label input::placeholder, .form-label textarea::placeholder {     color: #6b7a86 
+}
+
+.form-label textarea { 
+    resize: vertical; 
+    min-height: 140px 
+}
+
+.btn-send {
+    margin-top: 12px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+    cursor: pointer;
+    transition: transform 0.12s ease, 
+    box-shadow 0.12s ease;
+}
+
+.btn-send:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 24px rgba(99,102,241,0.18) 
+}
+
+/* status message shown after submit */
+.form-status { margin-top: 10px; font-weight: 600; }
+
+@media (max-width: 900px) {
+    .contact-section { 
+        width: 80%;
+        padding: 0 8px; grid-template-columns: 1fr; }
+    .contact-form { 
+        justify-content: stretch }
+    .contact-form-card { max-width: 100%; }
+}

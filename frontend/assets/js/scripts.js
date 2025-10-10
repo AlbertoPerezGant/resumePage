@@ -130,3 +130,36 @@ function renderProjectsGrid() {
 }
 
 document.addEventListener('DOMContentLoaded', renderProjectsGrid);
+
+// --- Contact Form Submission ---
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+
+    if (form) {
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault(); // Evita recargar la página
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch("http://127.0.0.1:8000/submit_form", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert("✅ " + result.message);
+                    form.reset();
+                } else {
+                    alert("❌ Error: " + (result.detail || "Error desconocido"));
+                }
+
+            } catch (error) {
+                console.error("Error enviando el formulario:", error);
+                alert("⚠️ No se pudo conectar con el servidor.");
+            }
+        });
+    }
+});
