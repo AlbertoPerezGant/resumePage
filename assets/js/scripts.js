@@ -140,9 +140,8 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault(); // Evita recargar la página
 
             const formData = new FormData(form);
-
             try {
-                const response = await fetch("http://127.0.0.1:8000/submit_form", {
+                const response = await fetch("/api/submit_form", {
                     method: "POST",
                     body: formData
                 });
