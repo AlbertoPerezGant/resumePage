@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>albperez</title>
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="icon" type="image/png" href="assets/images/APG_logo.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">APG</div>
+        <span class="navbar-title">Alberto Perez Gant</span>
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <button id="scrollToTopBtn" title="Volver arriba">↑</button>
+    <section id="home" class="container main-container">
+        <div class="hero-logo navbar-logo">APG</div>
+        <h1 id="hero-title-js" class="hero-title"></h1>
+        <div id="hero-subtitle-js" class="hero-subtitle"></div>
+        <div class="hero-description">
+            <p id="hero-description-js"></p>
+        </div>
+        <div class="hero-buttons">
+            <a href="#projects" class="hero-btn-primary">View My Work</a>
+            <a href="#contact" class="hero-btn-secondary">Get in Touch</a>
+        </div>
+    </section>
+    <div class="container main-container">
+        
+        <!-- Contact & Skills Section -->
+        <div class="contact-skills">
+
+            <!-- Skills -->
+            <div id="skills" class="skills">
+                <h2>Skills</h2>
+                <div id="skills-badges-js" class="skills-badges"></div>
+            </div>
+        </div>
+
+        
+
+        <!-- Experience Section (stacked cards) -->
+        <div id="experience" class="experience-section">
+            <h2 class="experience-title">Professional Experience</h2>
+            <div id="experience-list-js" class="experience-list"></div>
+        </div>
+
+        <!-- Projects Section v2 -->
+        <div id="projects" class="projects-section-v2">
+          <h2 class="projects-title-v2">Featured Projects</h2>
+          <div id="projects-grid-js" class="projects-grid-v2"></div>
+        </div>
+
+        <!-- Education Section -->
+        <div id="education" class="education-section">
+            <h2 class="education-title">Education</h2>
+            <div id="education-list-js" class="education-list"></div>
+        </div>
+
+        <!-- Get in touch Section -->
+        <div class="contact-section">
+            <h2 class="contact-title">Get in touch</h2>
+            <div class="contact-data">
+                <div id="contact" class="contact-info">
+                <h3>Let's connect</h3>
+                <p class="contact-description">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/alberto-p/" target="_blank" rel="noopener noreferrer" class="social-button">
+                            <img src="./assets/images/linkedin-icon.png" alt="LinkedIn" class="social-icon">
+                        </a>
+                        <a href="https://github.com/AlbertoPerezGant" target="_blank" rel="noopener noreferrer" class="social-button">
+                            <img src="./assets/images/github-icon.png" alt="GitHub" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm" class="contact-card contact-form-card" novalidate>
+                    <div class="form-header">
+                        <h3>Send a Message</h3>
+                    </div>
+
+                    <label class="form-label" for="name">Name
+                        <input id="name" name="name" type="text" placeholder="Your name" required>
+                    </label>
+
+                    <label class="form-label" for="email">Email
+                        <input id="email" name="email" type="email" placeholder="your.email@example.com" required>
+                    </label>
+
+                    <label class="form-label" for="message">Message
+                        <textarea id="message" name="message" placeholder="Your message..." rows="6" required></textarea>
+                    </label>
+
+                    <button type="submit" class="btn-send">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            &copy; 2025 Alberto Perez. All rights reserved.
+        </div>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

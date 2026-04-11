@@ -1,0 +1,16 @@
+.git
+.gitignore
+.dockerignore
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.db
+backend/responses.db
+.DS_Store
+.env
+node_modules
+Dockerfile
+docker-compose.yml
+README.md
