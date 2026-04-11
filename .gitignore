@@ -1,0 +1,11 @@
+.DS_Store
+.venv
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+backend/responses.db
+frontend/data/data.json.bak
+.vscode/
+.idea/
+*.log
