@@ -161,33 +161,45 @@ async function loadAndRenderDynamicData() {
 document.addEventListener('DOMContentLoaded', loadAndRenderDynamicData);
 
 // --- Contact Form Submission ---
+const POCKETBASE_URL = "https://albertoperezgant.com/pb";
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contactForm");
 
     if (form) {
         form.addEventListener("submit", async (e) => {
-            e.preventDefault(); // Evita recargar la página
+            e.preventDefault();
 
             const formData = new FormData(form);
+            const emailValue = formData.get("email");
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailValue)) {
+                alert("⚠️ Please enter a valid email address.");
+                return;
+            }
 
             try {
-                const response = await fetch("/api/submit_form", {
+                const response = await fetch(`${POCKETBASE_URL}/api/collections/Contactos_Alberto/records`, {
                     method: "POST",
-                    body: formData
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        name: formData.get("name"),
+                        email: emailValue,
+                        message: formData.get("message")
+                    })
                 });
 
-                const result = await response.json();
-
                 if (response.ok) {
-                    alert("✅ " + result.message);
+                    alert("✅ Message sent successfully!");
                     form.reset();
                 } else {
-                    alert("❌ Error: " + (result.detail || "Error desconocido"));
+                    const result = await response.json();
+                    alert("❌ Error: " + (result.message || "Unknown error"));
                 }
 
             } catch (error) {
-                console.error("Error enviando el formulario:", error);
-                alert("⚠️ No se pudo conectar con el servidor.");
+                console.error("Error sending form:", error);
+                alert("⚠️ Could not connect to the server.");
             }
         });
     }
