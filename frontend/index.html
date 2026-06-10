@@ -4,23 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>albperez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="icon" type="image/png" href="assets/images/APG_logo.png">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-logo">APG</div>
-        <span class="navbar-title">Alberto Perez Gant</span>
-        <button class="menu-toggle" aria-label="Open menu">☰</button>
-        <div class="nav-links">
-            <a href="#home" class="active">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+    <nav class="navbar" data-component="navbar"></nav>
     <button id="scrollToTopBtn" title="Volver arriba">↑</button>
     <section id="home" class="container main-container">
         <div class="hero-logo navbar-logo">APG</div>
@@ -101,17 +92,22 @@
                         <textarea id="message" name="message" placeholder="Your message..." rows="6" required></textarea>
                     </label>
 
+                    <div class="form-legal">
+                        <label class="form-consent">
+                            <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
+                            <span>I have read and accept the <a href="privacy.html">Privacy Policy</a></span>
+                        </label>
+                        <p class="form-legal-note">Data controller: Alberto Perez Gant. Your data will only be used to reply to your message. You can exercise your data protection rights at <a href="mailto:info@albertoperezgant.com">info@albertoperezgant.com</a>.</p>
+                    </div>
+
                     <button type="submit" class="btn-send">Send Message</button>
                 </form>
             </div>
         </div>
 
     </div>
-    <footer class="footer">
-        <div class="footer-content">
-            &copy; 2025 Alberto Perez. All rights reserved.
-        </div>
-    </footer>
+    <footer class="footer" data-component="footer"></footer>
+    <script src="assets/js/components.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
 </html>

@@ -47,6 +47,11 @@
   ],
   "projects": [
     {
+      "title": "MCP for IT ticket classification",
+      "description": "Development of a machine learning model to classify IT support tickets into different categories based on their content.",
+      "badges": ["Python", "Machine Learning", "MCP"]
+    },
+    {
       "title": "Model training for RLHF",
       "description": "Development of a course in colaboration with Datacamp related to a model training for Reinforcement Learning for Human Feedback.",
       "badges": ["Python", "Neural Networks", "RLHF"]
