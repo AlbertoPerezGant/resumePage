@@ -4,37 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>albperez</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="icon" type="image/png" href="assets/images/APG_logo.png">
 </head>
 <body>
     <nav class="navbar" data-component="navbar"></nav>
-    <button id="scrollToTopBtn" title="Volver arriba">↑</button>
     <section id="home" class="container main-container">
-        <div class="hero-logo navbar-logo">APG</div>
-        <h1 id="hero-title-js" class="hero-title"></h1>
+        <div class="hero-heading">
+            <h1 id="hero-title-js" class="hero-title"></h1>
+            <img class="hero-photo" src="assets/images/foto_albperez.png" alt="Portrait of Alberto Perez Gant" width="160" height="160">
+        </div>
         <div id="hero-subtitle-js" class="hero-subtitle"></div>
         <div class="hero-description">
             <p id="hero-description-js"></p>
         </div>
         <div class="hero-buttons">
             <a href="#projects" class="hero-btn-primary">View My Work</a>
-            <a href="#contact" class="hero-btn-secondary">Get in Touch</a>
+            <a href="#contact" class="hero-btn-secondary">Contact</a>
         </div>
     </section>
     <div class="container main-container">
         
-        <!-- Contact & Skills Section -->
-        <div class="contact-skills">
-
-            <!-- Skills -->
-            <div id="skills" class="skills">
-                <h2>Skills</h2>
-                <div id="skills-badges-js" class="skills-badges"></div>
-            </div>
+        <div id="skills" class="skills">
+            <h2>Skills</h2>
+            <div id="skills-badges-js" class="skills-badges"></div>
         </div>
 
         
@@ -57,55 +50,22 @@
             <div id="education-list-js" class="education-list"></div>
         </div>
 
-        <!-- Get in touch Section -->
-        <div class="contact-section">
-            <h2 class="contact-title">Get in touch</h2>
-            <div class="contact-data">
-                <div id="contact" class="contact-info">
-                <h3>Let's connect</h3>
-                <p class="contact-description">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/alberto-p/" target="_blank" rel="noopener noreferrer" class="social-button">
-                            <img src="./assets/images/linkedin-icon.png" alt="LinkedIn" class="social-icon">
-                        </a>
-                        <a href="https://github.com/AlbertoPerezGant" target="_blank" rel="noopener noreferrer" class="social-button">
-                            <img src="./assets/images/github-icon.png" alt="GitHub" class="social-icon">
-                        </a>
-                    </div>
-                </div>
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <p>For professional enquiries, you can find me here:</p>
+            <div class="social-links">
+                <a href="assets/documents/cv_alberto_perez.pdf" class="social-link download-link" download>
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v4h14v-4"/></svg>
+                    <span>Download CV</span>
+                </a>
+                <a href="https://www.linkedin.com/in/alberto-p/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/AlbertoPerezGant" target="_blank" rel="noopener noreferrer" class="social-link">GitHub <span aria-hidden="true">↗</span></a>
+                <a href="mailto:info@albertoperezgant.com" class="social-link">Email <span aria-hidden="true">↗</span></a>
             </div>
-            <div class="contact-form">
-                <form id="contactForm" class="contact-card contact-form-card">
-                    <div class="form-header">
-                        <h3>Send a Message</h3>
-                    </div>
-
-                    <label class="form-label" for="name">Name
-                        <input id="name" name="name" type="text" placeholder="Your name" required>
-                    </label>
-
-                    <label class="form-label" for="email">Email
-                        <input id="email" name="email" type="email" placeholder="your.email@example.com" required>
-                    </label>
-
-                    <label class="form-label" for="message">Message
-                        <textarea id="message" name="message" placeholder="Your message..." rows="6" required></textarea>
-                    </label>
-
-                    <div class="form-legal">
-                        <label class="form-consent">
-                            <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
-                            <span>I have read and accept the <a href="privacy.html">Privacy Policy</a></span>
-                        </label>
-                        <p class="form-legal-note">Data controller: Alberto Perez Gant. Your data will only be used to reply to your message. You can exercise your data protection rights at <a href="mailto:info@albertoperezgant.com">info@albertoperezgant.com</a>.</p>
-                    </div>
-
-                    <button type="submit" class="btn-send">Send Message</button>
-                </form>
-            </div>
-        </div>
+        </section>
 
     </div>
+    <a class="back-to-top" href="#home" aria-label="Back to top" title="Back to top">↑</a>
     <footer class="footer" data-component="footer"></footer>
     <script src="assets/js/components.js"></script>
     <script src="assets/js/scripts.js"></script>

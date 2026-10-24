@@ -1,99 +1,25 @@
 // This file contains the JavaScript code for the project. It is used to add interactivity and functionality to the web page.
 
-window.addEventListener('load', () => {
-    window.scrollTo(0, 0);
-    if (window.location.hash) {
-        history.replaceState(null, null, ' ');
-    }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     if (menuToggle && navLinks) {
-        menuToggle.onclick = function(e) {
-            e.stopPropagation();
-            navLinks.classList.toggle('active');
-        };
-        // Cerrar el menú si se hace clic fuera
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
         document.addEventListener('click', function(event) {
             if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
                 navLinks.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
             }
         });
-    }
-
-    // Smooth scroll for navigation links with offset
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (!href.startsWith('#')) return; // enlaces a otras páginas: navegación normal
-            e.preventDefault();
-            const targetId = href.substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                const navbarHeight = document.querySelector('.navbar').offsetHeight; // Altura de la barra de navegación
-                const sectionPosition = targetSection.offsetTop; // Posición de la sección
-                const scrollPosition = sectionPosition - navbarHeight - 10; // Ajuste con margen de 10px
-
-                window.scrollTo({
-                    top: scrollPosition,
-                    behavior: 'smooth',
-                });
-
-                // Cerrar el menú después de hacer clic en un enlace
+        navLinks.addEventListener('click', event => {
+            if (event.target.closest('a')) {
                 navLinks.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
             }
         });
-    });
-
-    // Button scroll to top (solo presente en algunas páginas)
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    if (scrollToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) {
-                scrollToTopBtn.style.display = 'block';
-            } else {
-                scrollToTopBtn.style.display = 'none';
-            }
-        });
-        scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-
-    // Hacer que el título de la barra de navegación lleve arriba
-    const navbarTitle = document.querySelector('.navbar-title');
-    if (navbarTitle) {
-        navbarTitle.style.cursor = 'pointer';
-        navbarTitle.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-
-    // Punto rojo que sigue al raton (solo en dispositivos con puntero)
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (window.matchMedia('(hover: hover)').matches && !reducedMotion) {
-        const dot = document.createElement('div');
-        dot.id = 'cursor-dot';
-        document.body.appendChild(dot);
-
-        let mouseX = -100, mouseY = -100;
-        let dotX = -100, dotY = -100;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        // Seguimiento con un poco de retardo para un efecto sutil
-        function animateDot() {
-            dotX += (mouseX - dotX) * 0.18;
-            dotY += (mouseY - dotY) * 0.18;
-            dot.style.transform = `translate(${dotX - 4}px, ${dotY - 4}px)`;
-            requestAnimationFrame(animateDot);
-        }
-        animateDot();
     }
 });
 
@@ -188,48 +114,3 @@ async function loadAndRenderDynamicData() {
 }
 
 document.addEventListener('DOMContentLoaded', loadAndRenderDynamicData);
-
-// --- Contact Form Submission ---
-const POCKETBASE_URL = "https://albertoperezgant.com/pb";
-
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("contactForm");
-
-    if (form) {
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(form);
-            const emailValue = formData.get("email");
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(emailValue)) {
-                alert("⚠️ Please enter a valid email address.");
-                return;
-            }
-
-            try {
-                const response = await fetch(`${POCKETBASE_URL}/api/collections/Contactos_Alberto/records`, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        name: formData.get("name"),
-                        email: emailValue,
-                        message: formData.get("message")
-                    })
-                });
-
-                if (response.ok) {
-                    alert("✅ Message sent successfully!");
-                    form.reset();
-                } else {
-                    const result = await response.json();
-                    alert("❌ Error: " + (result.message || "Unknown error"));
-                }
-
-            } catch (error) {
-                console.error("Error sending form:", error);
-                alert("⚠️ Could not connect to the server.");
-            }
-        });
-    }
-});

@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const prefix = navbar.dataset.prefix || '';
         navbar.innerHTML = `
             <div class="navbar-logo">APG</div>
-            <span class="navbar-title">Alberto Perez Gant</span>
-            <button class="menu-toggle" type="button" aria-label="Open menu">☰</button>
-            <div class="nav-links">
+            <a class="navbar-title" href="${prefix}#home">Alberto Perez Gant</a>
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+            <div class="nav-links" id="primary-navigation">
                 ${NAV_LINKS.map((link, i) =>
                     `<a href="${prefix}#${link.id}"${!prefix && i === 0 ? ' class="active"' : ''}>${link.label}</a>`
                 ).join('')}
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (footer) {
         footer.innerHTML = `
             <div class="footer-content">
-                &copy; 2025 Alberto Perez. All rights reserved.
+                &copy; 2026 Alberto Perez. All rights reserved.
                 <span class="footer-sep">|</span>
                 <a href="privacy.html" class="footer-link">Privacy Policy</a>
             </div>`;

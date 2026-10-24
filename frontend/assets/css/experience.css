@@ -1,66 +1,16 @@
-/* Modular styles for Experience section (neoretro) */
-.experience-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    margin: 0 auto 3rem auto;
-    padding: 0 12px;
-}
-.experience-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-.experience-card {
-    background: var(--surface);
-    padding: 1.5rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 2px solid var(--ink);
-    box-shadow: 4px 4px 0 var(--shadow-color);
-    box-sizing: border-box;
-    transition: transform 0.15s, box-shadow 0.15s;
-}
-.experience-card:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 var(--accent);
-}
-.experience-card h3 {
-    font-family: var(--font-pixel);
-    margin: 0 0 0.5rem 0;
-}
-.experience-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-}
-.experience-info li {
-    color: var(--muted);
-}
-.experience-date {
-    gap: 0.5rem;
-    min-width: 250px;
-    text-align: right;
-    font-family: var(--font-pixel);
-}
-/* Mobile: stacked cards with side padding */
-@media (max-width: 900px) {
-    .experience-list {
-        max-width: 90%;
-        gap: 1rem;
-    }
-    .experience-card {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem 1rem 1rem;
-    }
-    .experience-date {
-        margin-top: 0.7rem;
-    }
+.experience-section { width: 100%; margin: 0 auto 88px; }
+.experience-list { display: flex; flex-direction: column; width: 100%; }
+.experience-card { display: flex; align-items: flex-start; justify-content: space-between; gap: 28px; padding: 24px 0; border-top: 1px solid var(--border-color); }
+.experience-card:last-child { border-bottom: 1px solid var(--border-color); }
+.experience-card h3 { margin: 0 0 10px; font-size: 1.05rem; font-weight: 620; }
+.experience-info { display: flex; flex-direction: column; gap: 0.3rem; }
+.experience-info ul { margin: 0; padding-left: 19px; color: var(--muted); }
+.experience-info li { padding: 2px 0; }
+.experience-date { display: flex; align-items: center; gap: 7px; flex-shrink: 0; color: var(--muted); font-size: 0.9rem; }
+.experience-date svg { display: none; }
+
+@media (max-width: 700px) {
+    .experience-section { margin-bottom: 64px; }
+    .experience-card { flex-direction: column; gap: 8px; padding: 20px 0; }
+    .experience-date { order: -1; }
 }

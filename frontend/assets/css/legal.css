@@ -22,8 +22,8 @@
 
 .legal-block {
     background: var(--surface);
-    border: 2px solid var(--ink);
-    box-shadow: 4px 4px 0 var(--shadow-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     padding: 0.5rem 1.5rem;
     margin-bottom: 1rem;
 }
@@ -43,7 +43,7 @@
 .legal-container a {
     color: var(--ink);
     text-decoration: underline;
-    text-decoration-color: var(--accent);
+    text-decoration-color: currentColor;
     text-underline-offset: 3px;
 }
 
@@ -54,58 +54,4 @@
 .legal-back {
     align-self: flex-start;
     margin-top: 2.5rem;
-}
-
-/* Bloque de consentimiento del formulario de contacto */
-.form-legal {
-    margin-top: 6px;
-}
-
-.form-consent {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 0.85rem;
-    cursor: pointer;
-}
-
-.form-consent input[type="checkbox"] {
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    margin: 2px 0 0;
-    flex-shrink: 0;
-    background: var(--bg);
-    border: 2px solid var(--ink);
-    cursor: pointer;
-    transition: background 0.15s, border-color 0.15s;
-}
-
-.form-consent input[type="checkbox"]:checked {
-    background: var(--accent);
-    box-shadow: inset 0 0 0 3px var(--surface);
-}
-
-.form-consent input[type="checkbox"]:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-
-.form-legal a {
-    color: var(--ink);
-    text-decoration: underline;
-    text-decoration-color: var(--accent);
-    text-underline-offset: 3px;
-}
-
-.form-legal a:hover {
-    color: var(--accent);
-}
-
-.form-legal-note {
-    font-size: 0.75rem;
-    color: var(--muted);
-    margin: 8px 0 0;
-    padding-left: 0;
-    line-height: 1.5;
 }
